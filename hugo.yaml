@@ -1,5 +1,5 @@
-baseURL: "https://dazhuangzhuang1024.github.io/" # 部署时请修改为你的 GitHub Pages 地址
-title: "My Digital Garden"
+baseURL: "https://lidenghui1110.github.io/" # 已修改为你的地址
+title: "Lidenghui's Blog"
 theme: "PaperMod"
 
 languageCode: "en-us"
