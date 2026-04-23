@@ -1,0 +1,146 @@
+baseURL: "https://dazhuangzhuang1024.github.io/" # 部署时请修改为你的 GitHub Pages 地址
+title: "My Digital Garden"
+theme: "PaperMod"
+
+languageCode: "en-us"
+defaultContentLanguage: "en"
+
+paginate: 10
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: ""
+
+minify:
+  disableXML: false
+  minifyOutput: true
+
+params:
+  env: "production" # to enable google analytics, opengraph, twitter-cards and schema.org
+  title: "My Digital Garden"
+  description: "A place to share my thoughts and learnings."
+  author: "Me"
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Welcome to My Blog 👋"
+    Content: "I'm a developer who loves building things and sharing knowledge."
+
+  # profile mode
+  # profileMode:
+  #   enabled: true
+  #   title: "Me"
+  #   subtitle: "Developer / Writer"
+  #   imageUrl: "<img location>"
+  #   imageWidth: 120
+  #   imageHeight: 120
+  #   buttons:
+  #     - name: Posts
+  #       url: posts
+  #     - name: Tags
+  #       url: tags
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/"
+    - name: twitter
+      url: "https://twitter.com/"
+
+  editPost:
+    URL: "https://github.com/<user>/<repo>/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # display full content in list pages
+  showFullContents: false
+  # show post summary in list pages
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemenu: false
+  showtoc: true
+  tocopen: false
+
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+
+  assets:
+    # disableHLJS: true
+    # favicon: "<link / path>"
+    # favicon16x16: "<link / path>"
+    # favicon32x32: "<link / path>"
+    # apple_touch_icon: "<link / path>"
+    # safari_pinned_tab: "<link / path>"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  # profileMode:
+  #   enabled: false # needs to be explicitly set
+  #   title: PaperMod
+  #   subtitle: "This is subtitle"
+  #   imageUrl: "<img location>"
+  #   imageAlt: image alt
+  #   imageWidth: 120
+  #   imageHeight: 120
+  #   buttons:
+  #     - name: Archives
+  #       url: archives
+  #     - name: Tags
+  #       url: tags
+
+  # search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 100
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # for search
+
+# Mermaid support
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
